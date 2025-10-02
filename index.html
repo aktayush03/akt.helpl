@@ -1,249 +1,276 @@
 <!DOCTYPE html>
-<html lang="yes">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AKT.Ayush - Climate Change Solutions</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #72EDF2 10%, #5151E5 100%);
-            color: #333;
-            scroll-behavior: smooth;
-        }
-        header {
-            background-color: rgba(255, 255, 255, 0.95);
-            padding: 20px 40px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        header h1 {
-            margin: 0;
-            font-weight: 600;
-            color: #303f9f;
-            letter-spacing: 2px;
-        }
-        no {
-            margin-top: 10px;
-        }
-        nav a {
-            color: #303f9f;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-        nav a::after {
-            content: '';
-            display: block;
-            height: 2px;
-            background: #ff6f61;
-            width: 0;
-            transition: width 0.3s;
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-        }
-        nav a:hover {
-            color: #ff6f61;
-        }
-        nav a:hover::after {
-            width: 100%;
-        }
-        .hero {
-            text-align: center;
-            padding: 120px 20px 70px;
-            color: #fff;
-            text-shadow: 1px 1px 7px rgba(0, 0, 0, 0.8);
-        }
-        .hero h2 {
-            font-size: 3.5em;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-        .hero p {
-            font-size: 1.4em;
-            max-width: 720px;
-            margin: 0 auto;
-            line-height: 1.6;
-            font-weight: 400;
-        }
-        .button-primary {
-            display: inline-block;
-            margin-top: 40px;
-            padding: 18px 48px;
-            background-color: #ff6f61;
-            color: white;
-            border-radius: 50px;
-            text-transform: uppercase;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 8px 20px rgba(255, 111, 97, 0.35);
-            text-decoration: none;
-        }
-        .button-primary:hover {
-            background-color: #e05a50;
-            box-shadow: 0 12px 30px rgba(224, 90, 80, 0.6);
-        }
-        section {
-            background: white;
-            margin: 60px 20px;
-            padding: 50px 40px;
-            border-radius: 25px;
-            box-shadow: 0 18px 40px rgba(0,0,0,0.12);
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-            transition: transform 0.3s ease;
-        }
-        section:hover {
-            transform: translateY(-8px);
-        }
-        section h3 {
-            color: #303f9f;
-            margin-bottom: 30px;
-            font-weight: 700;
-            font-size: 2em;
-            letter-spacing: 1.2px;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .card {
-            background: #f9f9f9;
-            padding: 30px 25px;
-            border-radius: 25px;
-            box-shadow: 0 14px 30px rgba(0,0,0,0.07);
-            transition: box-shadow 0.3s ease;
-        }
-        .card:hover {
-            box-shadow: 0 20px 50px rgba(0,0,0,0.12);
-        }
-        .card h4 {
-            margin-top: 0;
-            color: #5151e5;
-            font-weight: 800;
-            font-size: 1.6em;
-            margin-bottom: 15px;
-        }
-        .card p {
-            color: #555;
-            line-height: 1.7;
-            font-weight: 400;
-        }
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            background-color: rgba(48, 63, 159, 0.95);
-            color: white;
-            margin-top: 70px;
-            font-size: 1em;
-            font-weight: 500;
-            letter-spacing: 0.8px;
-        }
-        footer p {
-            margin: 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AKT.Ayush - Climate Change Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
 
-        /* Responsive Typography */
-        @media (max-width: 768px) {
-            .hero h2 {
-                font-size: 2.6em;
-            }
-            .hero p {
-                font-size: 1.1em;
-            }
-            section h3 {
-                font-size: 1.6em;
-            }
-            .card h4 {
-                font-size: 1.3em;
-            }
-        }
-        @media (max-width: 480px) {
-            nav a {
-                margin: 0 10px;
-                font-size: 0.9em;
-            }
-            .button-primary {
-                padding: 14px 30px;
-                font-size: 0.9em;
-            }
-        }
-    </style>
+    /* Futuristic Animated Background */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: radial-gradient(circle, rgba(255,255,255,0.05) 2%, transparent 40%);
+      animation: moveBg 25s linear infinite;
+      z-index: -1;
+    }
+    @keyframes moveBg {
+      from { transform: translate(0,0); }
+      to { transform: translate(1000px,1000px); }
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      padding: 20px 40px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 0 20px rgba(0, 255, 200, 0.3);
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      color: #00ffc6;
+      text-shadow: 0 0 10px #00ffc6;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    nav a::after {
+      content: '';
+      display: block;
+      height: 2px;
+      background: #00ffc6;
+      width: 0;
+      transition: width 0.3s;
+      margin-top: 4px;
+    }
+    nav a:hover {
+      color: #00ffc6;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 120px 20px 70px;
+      color: #fff;
+    }
+    .hero h2 {
+      font-size: 3.5em;
+      margin-bottom: 20px;
+      font-weight: 700;
+      text-shadow: 0 0 20px #00ffc6;
+    }
+    .hero p {
+      font-size: 1.3em;
+      max-width: 720px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .button-primary {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 16px 40px;
+      background: #00ffc6;
+      color: #000;
+      border-radius: 50px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 0 20px rgba(0, 255, 200, 0.7);
+      transition: all 0.3s ease;
+    }
+    .button-primary:hover {
+      background: #00cfa5;
+      box-shadow: 0 0 30px rgba(0, 255, 200, 1);
+    }
+
+    section {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      margin: 60px 20px;
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.2);
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    section h3 {
+      color: #00ffc6;
+      margin-bottom: 30px;
+      font-weight: 700;
+      font-size: 2em;
+      text-shadow: 0 0 10px #00ffc6;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,255,200,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 0 30px rgba(0,255,200,0.5);
+    }
+    .card h4 {
+      margin-top: 0;
+      color: #fff;
+      font-weight: 700;
+    }
+    .card p {
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #aaa;
+      font-size: 0.9em;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h2 { font-size: 2.5em; }
+      .hero p { font-size: 1em; }
+      section h3 { font-size: 1.5em; }
+    }
+  </style>
 </head>
 <body>
 <header>
-    <h1>ACT.Ayush</h1>
-    <none>
-        <a href="#about">About</a>
-        <a href="#solutions">Solutions</a>
-        <a href="#stories">Success Stories</a>
-        <a href="#get-involved">Get Involved</a>
-        <a href="#contact">Contact</a>
-    </none>
+  <h1>AKT.Ayush</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#solutions">Solutions</a>
+    <a href="#stories">Stories</a>
+    <a href="#calculator">Calculator</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
+
 <section class="hero">
-    <h2>Together for a Greener Planet</h2>
-    <p>Discover innovative solutions to combat climate change and protect our environment for future generations.</p>
-    <a class="button-primary" href="#solutions">Explore Solutions</a>
+  <h2>Together for a Greener Planet</h2>
+  <p>Discover innovative solutions to combat climate change and protect our environment for future generations.</p>
+  <a class="button-primary" href="#solutions">Explore Solutions</a>
 </section>
+
 <section id="about">
-    <h3>About Climate Change</h3>
-    <p>Climate change is the biggest environmental challenge of our time, driven by human activities that increase greenhouse gases. Its impacts include rising global temperatures, extreme weather, sea-level rise, and loss of biodiversity.</p>
+  <h3>About Climate Change</h3>
+  <p>Climate change is the biggest environmental challenge of our time, driven by human activities that increase greenhouse gases. Its impacts include rising global temperatures, extreme weather, sea-level rise, and loss of biodiversity.</p>
 </section>
+
 <section id="solutions">
-    <h3>Solutions & Actions</h3>
-    <div class="grid">
-        <div class="card">
-            <h4>Individual Actions</h4>
-            <p>Reduce waste, save energy, and adopt sustainable habits in daily life to lower your carbon footprint.</p>
-        </div>
-        <div class="card">
-            <h4>Community Initiatives</h4>
-            <p>Join or start local projects focused on conservation, clean energy, and environmental education.</p>
-        </div>
-        <div class="card">
-            <h4>Policy Advocacy</h4>
-            <p>Support policies aimed at reducing emissions, protecting natural habitats, and promoting green technologies.</p>
-        </div>
+  <h3>Solutions & Actions</h3>
+  <div class="grid">
+    <div class="card">
+      <h4>Individual Actions</h4>
+      <p>Reduce waste, save energy, and adopt sustainable habits in daily life to lower your carbon footprint.</p>
     </div>
+    <div class="card">
+      <h4>Community Initiatives</h4>
+      <p>Join or start local projects focused on conservation, clean energy, and environmental education.</p>
+    </div>
+    <div class="card">
+      <h4>Policy Advocacy</h4>
+      <p>Support policies aimed at reducing emissions, protecting natural habitats, and promoting green technologies.</p>
+    </div>
+  </div>
 </section>
+
 <section id="stories">
-    <h3>Success Stories</h3>
-    <p>Discover inspiring stories where communities and individuals have made measurable positive impacts in the fight against climate change.</p>
+  <h3>Success Stories</h3>
+  <p>Discover inspiring stories where communities and individuals have made measurable positive impacts in the fight against climate change.</p>
 </section>
-<section id="get-involved">
-    <h3>Get Involved</h3>
-    <p>Volunteer, attend events, or donate to causes supporting environmental sustainability and climate action.</p>
+
+<section id="calculator">
+  <h3>Carbon Footprint Calculator</h3>
+  <p>Enter your daily activities to estimate your carbon footprint:</p>
+  <form id="footprintForm">
+    <label>Daily km traveled by car: <input type="number" id="carKm" min="0" /></label><br><br>
+    <label>Daily electricity use (kWh): <input type="number" id="electricity" min="0" /></label><br><br>
+    <button type="submit" class="button-primary">Calculate</button>
+  </form>
+  <p id="result"></p>
 </section>
+
 <section id="contact">
-    <h3>Contact</h3>
-    <p>Connect with us on social media or join our newsletter to stay updated on the latest in climate solutions.</p>
+  <h3>Contact</h3>
+  <p>Connect with us on social media or join our newsletter to stay updated on the latest in climate solutions.</p>
 </section>
+
 <footer>
-    <p>&copy; 2025 AKT.Ayush - Together for a Greener Planet</p>
+  <p>&copy; 2025 AKT.Ayush - Together for a Greener Planet</p>
 </footer>
 
 <script>
-// Smooth scroll when navigation links are clicked
+// Smooth scroll
 document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetID = this.getAttribute('href').substring(1);
-        document.getElementById(targetID).scrollIntoView({ behavior: 'smooth' });
-    });
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+// Section fade-in on scroll
+const sections = document.querySelectorAll('section');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+sections.forEach(section => observer.observe(section));
+
+// Carbon footprint calculator
+document.getElementById('footprintForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const carKm = parseFloat(document.getElementById('carKm').value) || 0;
+  const electricity = parseFloat(document.getElementById('electricity').value) || 0;
+  const footprint = (carKm * 0.2) + (electricity * 0.5); // simple estimate
+  document.getElementById('result').innerText = `Your estimated daily carbon footprint: ${footprint.toFixed(2)} kg CO₂`;
 });
 </script>
 </body>
